@@ -16,7 +16,7 @@ for record in rudii:
     numGC = seq.count('GC')
     fATG = seq.count('ATG')
     rATG = seq.reverse_complement().count('ATG')
-
+import pandas as pd
 drudii = { 'Length': lseq, 'GC_Content' : numGC, 'ATG_Forward' : fATG, 'ATG_Reverse': rATG}
 data = pd.DataFrame(drudii)
 data.to_csv('rudii.csv')
