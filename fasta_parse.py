@@ -19,6 +19,7 @@ for record in proteins:
     Len.append(len(record.seq))
     NumC.append(record.seq.count('C'))
 
+import pandas as pd
 dprot = { 'ID': ID, 'First_10_AA' : First, 'Length' : Len, 'Number_Cs': NumC}
 data = pd.DataFrame(dprot)
 data.to_csv('protein_info.csv')
